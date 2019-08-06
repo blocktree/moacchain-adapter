@@ -128,7 +128,7 @@ func (wm *WalletManager) LoadAssetsConfig(c config.Configer) error {
 	wm.Config.GasLimit = c.String("gasLimit")
 	wm.Config.IsTestNet, _ = c.Bool("isTestnet")
 	wm.Client = NewClient(wm.Config.NodeAPI, false)
-
+	wm.Config.DataDir = c.String("dataDir")
 	return nil
 }
 
