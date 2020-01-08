@@ -210,6 +210,7 @@ func (decoder *TransactionDecoder) CreateMOACRawTransaction(wrapper openwallet.W
 		Nonce:   "",
 		Address: addr,
 		Message: hash,
+		RSV:true,
 	}
 
 	keySigs = append(keySigs, &signature)
